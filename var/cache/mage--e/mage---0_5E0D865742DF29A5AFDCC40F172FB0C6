@@ -1,0 +1,3 @@
+<reference name="root">
+   <block type="core/text_list" name="content"/>
+</reference>

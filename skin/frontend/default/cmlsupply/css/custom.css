@@ -1,0 +1,115 @@
+/* Custom Styles for CML Supply*/
+
+
+/*list-style removed by Magento.  This adds it back for the product description pages.*/
+.product-specs ul{ list-style: disc; list-style-position: inside;}
+
+
+/*Footer stuff*/
+.cml-footer-left{ float: left;	width: 25%; text-align: left; }
+
+.cml-footer-left p{ margin: 0; padding: 0; }
+
+
+.cml-footer-middle{ width: 50%; float: left; text-align: center;}
+
+.cml-footer-middle ul{ margin: 0 auto; }
+
+.cml-footer-middle li{ display:inline; margin: 0 2px 0 2px; }
+
+.cml-footer-middle a{ color: #101010; font-family: "trebuchet ms"; font-size: 12px; font-variant: small-caps; text-decoration: none; }
+
+.cml-footer-middle a:hover{ color: #222222; text-decoration: underline; }
+
+
+.cml-footer-right { width: 25%; float: right; }
+
+.cml-footer-right ul { float: right; margin: 0;  border: 3px solid #D0D0D0; padding: 0 5px;  background-color: #F9F9F9;}
+
+.cml-footer-right li{ display:inline; margin: 0; }
+
+.cml-footer-right p{ margin: 0; padding: 0; }
+
+
+
+.cml-copywrite { font-family: "arial"; font-size: 12px; font-weight: bold; }
+
+.cml-rightsreserved { font-family: "arial"; font-size: 10px; word-spacing: 7px; letter-spacing: 2px; }
+
+
+/*Badges and logos in RH column on home page*/
+.cml-endorsements { float: right; }
+
+.cml-endorsements li { margin-bottom: 33px; }
+
+.cml-endorsements li#cml-newsletter { margin-top: 30px; }
+        
+#cml-repatoologo, #cml-paypalverifiedlogo, #cml-newletter, #cml-bbblogo, #cml-googlecheckoutlogo{ padding-left: 10px; }
+        
+#cml-paypalverifiedlogo img{ width: 80px; margin-right: 5px; }
+
+#cml-googlecheckoutlogo img { width: 175px;}
+
+
+/*CMS Info pages.*/
+.cml-infotablecontainer{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.cml-infotablecontainer th{
+	text-align: center;
+}
+
+.cml-infotablecontainer td{
+	text-align: center;
+}
+
+.cml-infotablecontainer table{
+	border-spacing:0;
+	padding:0;
+	border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.cml-infocontainer ul{
+  list-style:disc;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.cml-altrow{
+	border-color: #666666;
+	background-color: #CCCCCC;
+}
+
+.cml-resourcetablecontainer th{
+	text-align: left;
+	background-color: #cccccc;
+	}
+	
+.cml-resourcetablecontainer th.category{
+	width: 100px;
+	}
+	
+.cml-resourcetablecontainer{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.cml-resourcetablecontainer table{
+	border-spacing:0;
+	padding:0;
+	border-collapse: collapse;
+    margin: 15px auto;
+	width: 100%;
+	text-align: left;
+	border: 1px solid #cccccc;
+	width: 550px;
+
+}
+
+
+
+/*Misc styles*/
+.cml-featured-prod { float: left; width: 455px; }

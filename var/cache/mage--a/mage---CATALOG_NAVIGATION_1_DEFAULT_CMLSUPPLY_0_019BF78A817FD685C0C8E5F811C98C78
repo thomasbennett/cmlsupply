@@ -1,0 +1,29 @@
+<div class="box layered-nav">
+    <div class="head">
+        <h3>Browse By</h3>
+    </div>
+    <div class="border-creator">
+        <div class="narrow-by">
+            <dl id="narrow-by-list">
+                <dt>Category</dt>
+                <dd>
+                    <ol>
+                                                                    <li>
+                            <a href="http://www.cmlsupply.com/electronics-materials/solder-wire.html?___SID=U">Solder - Wire</a> (7)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/electronics-materials/solder-paste.html?___SID=U">Solder - Paste</a> (1)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/electronics-materials/solder-flux.html?___SID=U">Solder - Flux</a> (7)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/electronics-materials/polyimide-tapes.html?___SID=U">Polyimide (Kapton) Tapes</a> (10)
+                        </li>
+                                                                </ol>
+                </dd>
+            </dl><script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        </div>
+    </div>
+</div>
+<!-- [ends] .browse-by // -->

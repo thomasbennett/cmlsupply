@@ -1,0 +1,19 @@
+<reference name="root">
+   <block type="adminhtml/sales_order_create_load" name="content"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_shipping_method" template="sales/order/create/abstract.phtml" name="shipping_method">
+      <block type="adminhtml/sales_order_create_shipping_method_form" template="sales/order/create/shipping/method/form.phtml" name="form"/>
+   </block>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_totals" template="sales/order/create/totals.phtml" name="totals"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_billing_method" template="sales/order/create/abstract.phtml" name="billing_method">
+      <block type="adminhtml/sales_order_create_billing_method_form" template="sales/order/create/billing/method/form.phtml" name="form"/>
+   </block>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_messages" name="message"/>
+</reference>

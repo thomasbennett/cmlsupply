@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>ArtsOnIT_AdvancedSmtp</name>
+ <channel>connect.magentocommerce.com/community</channel>
+ <summary>Provide the support for all the smtp server (Autentication, SSL) </summary>
+ <description>Provide the support for all the smtp server (Autentication, SSL) </description>
+ <lead>
+  <name>Luca</name>
+  <user>ziq2004</user>
+  <email>me@ziq.it</email>
+  <active>yes</active>
+ </lead>
+ <date>2008-10-20</date>
+ <time>18:32:47</time>
+ <version>
+  <release>0.1.7</release>
+  <api>1.1</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license>N/A</license>
+ <notes>N/A</notes>
+ <contents>
+  <dir name="/">
+   <dir name="Mage">
+    <dir name="Advancedsmtp">
+     <dir name="etc">
+      <file md5sum="1d85c526a41c29693db623a5fc8dd5e4" name="config.xml" role="magecommunity" />
+      <file md5sum="c7c69e1954e24836e3ad5b76e86cc454" name="system.xml" role="magecommunity" />
+     </dir> <!-- /Mage/Advancedsmtp/etc -->
+     <dir name="Helper">
+      <file md5sum="c05de4a4aa9524d5e7f58be8c00538e4" name="Data.php" role="magecommunity" />
+     </dir> <!-- /Mage/Advancedsmtp/Helper -->
+     <dir name="Model">
+      <dir name="Config">
+       <dir name="Source">
+        <file md5sum="153d45ac9508e4d53a77926c31af07ea" name="Auth.php" role="magecommunity" />
+        <file md5sum="11e192713f1a20cd9bb4f0aa9ccbc607" name="Ssl.php" role="magecommunity" />
+       </dir> <!-- /Mage/Advancedsmtp/Model/Config/Source -->
+      </dir> <!-- /Mage/Advancedsmtp/Model/Config -->
+      <dir name="Email">
+       <file md5sum="cf435dec38a9019c2756065f31281b0b" name="Template.php" role="magecommunity" />
+      </dir> <!-- /Mage/Advancedsmtp/Model/Email -->
+      <file md5sum="3284938017185e0c1c26f5b79dfca6dd" name="Email.php" role="magecommunity" />
+     </dir> <!-- /Mage/Advancedsmtp/Model -->
+    </dir> <!-- /Mage/Advancedsmtp -->
+   </dir> <!-- /Mage -->
+   <dir name="modules">
+    <file md5sum="7966ef038d36e6cd38a21eb394a6b92f" name="Mage_AdvancedSmtp.xml" role="mageetc" />
+   </dir> <!-- /modules -->
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+    <max>6.0.0</max>
+    <exclude>6.0.0</exclude>
+   </php>
+   <pearinstaller>
+    <min>1.6.2</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+</package>

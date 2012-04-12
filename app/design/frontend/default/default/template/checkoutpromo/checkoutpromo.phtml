@@ -1,0 +1,66 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ *
+ * @category   AW
+ * @package    AW_Checkoutpromo
+ * @copyright  Copyright (c) 2008-2010 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ */
+?>
+<script type="text/javascript">
+
+    Event.observe(window, 'load', function() {
+        if (typeof(checkout)!='undefined') {
+            checkout._reloadProgressBlock = checkout.reloadProgressBlock;
+            checkout.reloadProgressBlock = function() {
+                refreshBlock();
+                return  checkout._reloadProgressBlock.apply(this, arguments)
+            }
+        }
+    })
+</script>
+<div id="checkoutpromo" >
+
+    <?php
+    $appliedBlockIds = $this->getAppliedBlockIds();
+
+    if (array_key_exists($this->getNameInLayout(), $appliedBlockIds)) {
+
+        foreach ($appliedBlockIds[$this->getNameInLayout()] as $appliedBlockId) {
+            echo $this->getLayout()->createBlock('cms/block')->setBlockId($appliedBlockId)->toHtml();
+        }
+    }
+    ?>
+</div>
+<script type="text/javascript"   >
+
+
+    function refreshBlock(){
+
+        new Ajax.Request('<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>/fcheckoutpromo/checkoutpromo/ajaxCheckout/', 
+        {
+            method:'get',
+            onSuccess: function(transport){
+                var response = transport.responseText;
+
+                var checkoutpromo_div = $('checkoutpromo');
+                checkoutpromo_div.update(response);              
+
+            },
+            onFailure: function(){
+                alert('Something went wrong, please try later...')
+            }
+        });
+
+    }
+
+</script>
+

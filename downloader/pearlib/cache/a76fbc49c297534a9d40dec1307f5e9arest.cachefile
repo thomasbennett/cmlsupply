@@ -1,0 +1,14 @@
+a:9:{s:7:"attribs";a:2:{s:5:"xmlns";s:36:"http://pear.php.net/dtd/rest.package";s:18:"xsi:schemaLocation";s:80:"http://pear.php.net/dtd/rest.package    http://pear.php.net/dtd/rest.package.xsd";}s:1:"n";s:19:"RicoNeitzel_VertNav";s:1:"c";s:37:"connect.magentocommerce.com/community";s:2:"ca";a:2:{s:7:"attribs";a:1:{s:10:"xlink:href";s:34:"/Chiara_PEAR_Server_REST/c/Default";}s:8:"_content";s:7:"Default";}s:1:"l";s:27:"Open Software License (OSL)";s:2:"lu";s:42:"http://opensource.org/licenses/osl-3.0.php";s:1:"s";s:68:"Vertical Category Navigation with subcategories and fine css classes";s:1:"d";s:829:"With this extension you're able to design you own vertical category navigation with subcategories and product count display.
+
+Each element has a fine css'ing so you can address each element or group exactly including "first" and "last" element per group and "previos", "activ" and "next" child.
+
+The module removes the top.navigation via XML-Update and places the vertical nav in "left" structural block. You can change this by modifying the vertnav.xml file.
+
+product count display can de switched on admin-panel under system -> configuration -> catalog as per StoreView attribute
+
+you should modify the vertnav.css-file in our default/default - Skinfolder to fit you needs. Delivered CSS is just for showcase.
+
+ChangeLog: v.0.1.9:
+- Categorynames with accents will now be possible
+
+Thanks to Netzarbeiter Vinai Kopp for Coding!";s:1:"r";a:1:{s:7:"attribs";a:1:{s:10:"xlink:href";s:46:"/Chiara_PEAR_Server_REST/r/RicoNeitzel_VertNav";}}}

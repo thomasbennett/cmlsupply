@@ -1,0 +1,34 @@
+a:14:{s:7:"attribs";a:2:{s:5:"xmlns";s:36:"http://pear.php.net/dtd/rest.release";s:18:"xsi:schemaLocation";s:81:"http://pear.php.net/dtd/rest.release     http://pear.php.net/dtd/rest.release.xsd";}s:1:"p";a:2:{s:7:"attribs";a:1:{s:10:"xlink:href";s:41:"/Chiara_PEAR_Server_REST/p/fontis_wysiwyg";}s:8:"_content";s:14:"Fontis_Wysiwyg";}s:1:"c";s:37:"connect.magentocommerce.com/community";s:1:"v";s:5:"1.1.1";s:2:"st";s:6:"stable";s:1:"l";s:8:"OSL v3.0";s:1:"m";s:12:"magentoadmin";s:1:"s";s:62:"Adds WYSIWYG editor functionality to admin backend text areas.";s:1:"d";s:222:"<p>Once the module is installed, select the editor you would like to use from the 'WYSIWYG Editors' section under System-&gt;Configuration. You can also select which text areas you would like the editor to show up for.</p>";s:2:"da";s:19:"2009-09-05 00:00:32";s:1:"n";s:1673:"1.1.1:
+- Removed iBrowser testing cached files.
+
+1.1.0:
+- Added TinyMCE file upload plugin (iBrowser).
+- Added preliminary support for CKeditor (FCKeditor version 3).
+- Fixed editors not loading on new transactional email pages (fix from TLS Web Solutions).
+- Fixed editors not appearing on category description textarea (fix from BouncingOrange).
+- Added TinyMCE Magento plugin developed by BouncingOrange, fixing extra break tags and double curly brace issues.
+- Fixed double curly brace issue in FCK submitted by Sensi.
+- Added language selection options for FCK and TinyMCE.
+- Added TinyMCE plugin selector.
+- Reorganised backend configuration options to allow custom config JavaScript to be specified in Magento instead of in config files.
+
+1.0.6:
+- Upgraded included versions of FCKEditor and TinyMCE.
+- Added security patch to FCKEditor file uploader submitted by Sensi.
+
+1.0.5:
+- Changed FCKEditor settings to eliminate newlines from editor output. This is a workaround to help eliminate unwanted break tags and extra spacing on the frontend.
+- Changed FCKEditor to be the default editor type.
+
+1.0.4:
+- Added config option allowing CSS IDs of additional textareas that should use the WYSIWYG editor to be specified.
+
+1.0.3:
+- Integrated FCKeditor file uploader with Magento.
+- Added FCKeditor skin configuration option.
+- Added FCKeditor file upload directory configuration option.
+
+1.0.2:
+- Fixed issue where some text areas would say 'Required field' and not submit correctly.
+- Added custom_config.js file to the FCKeditor directory where extra toolbar set definitions can be added.
+- Added option to configuration page to select the FCKeditor toolbar set used.";s:1:"f";s:7:"2012305";s:1:"g";s:69:"http://connect.magentocommerce.com/community/get/Fontis_Wysiwyg-1.1.1";s:1:"x";a:1:{s:7:"attribs";a:1:{s:10:"xlink:href";s:17:"package.1.1.1.xml";}}}

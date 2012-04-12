@@ -1,0 +1,9 @@
+<reference name="root">
+   <block type="adminhtml/sales_order_create_load" name="content"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_sidebar_cart" template="sales/order/create/sidebar/items.phtml" name="sidebar_cart"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_messages" name="message"/>
+</reference>

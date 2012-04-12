@@ -1,0 +1,23 @@
+<div class="box layered-nav">
+    <div class="head">
+        <h3>Browse By</h3>
+    </div>
+    <div class="border-creator">
+        <div class="narrow-by">
+            <dl id="narrow-by-list">
+                <dt>Category</dt>
+                <dd>
+                    <ol>
+                                                                    <li>
+                            <a href="http://www.cmlsupply.com/drilling-tools/drill-bits-individual/drill-bits-wire-size.html?___SID=U">Numbered Wire Drills</a> (80)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/drilling-tools/drill-bits-individual/drill-bits-metric.html?___SID=U">Metric Drills</a> (0)
+                        </li>
+                                                                </ol>
+                </dd>
+            </dl><script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        </div>
+    </div>
+</div>
+<!-- [ends] .browse-by // -->

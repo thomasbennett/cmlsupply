@@ -1,0 +1,32 @@
+<div class="box layered-nav">
+    <div class="head">
+        <h3>Browse By</h3>
+    </div>
+    <div class="border-creator">
+        <div class="narrow-by">
+            <dl id="narrow-by-list">
+                <dt>Category</dt>
+                <dd>
+                    <ol>
+                                                                    <li>
+                            <a href="http://www.cmlsupply.com/dispensing-needles-syringes/assortments-and-starter-kits.html?___SID=U">Assortments &amp; Starter Kits</a> (7)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/dispensing-needles-syringes/stainless-steel-needles.html?___SID=U">Needles- Stainless</a> (52)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/dispensing-needles-syringes/plastic-tapered-needles.html?___SID=U">Needles - Plastic Tapered</a> (11)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/dispensing-needles-syringes/syringes.html?___SID=U">Syringes</a> (15)
+                        </li>
+                                                                                            <li>
+                            <a href="http://www.cmlsupply.com/dispensing-needles-syringes/syringe-caps.html?___SID=U">Syringe Tip Caps</a> (4)
+                        </li>
+                                                                </ol>
+                </dd>
+            </dl><script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        </div>
+    </div>
+</div>
+<!-- [ends] .browse-by // -->

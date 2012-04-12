@@ -1,0 +1,377 @@
+<?php $_order = $this->getOrder(); ?>
+<div style="visibility: visible;" class="content-header">
+    <h3 class="icon-head head-sales-order-shipment">New Shipment for Order #<?php echo $_order->getIncrementId(); ?></h3>
+</div>
+<form id="edit_form" name="edit_form" method="post" action="<?php echo $this->getUrl('*/*/post'); ?>">
+    <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+    <input name="order_id" value="<?php echo $_order->getIncrementId(); ?>" type="hidden" />
+    <input name="weight_units" value="<?php echo $this->getWeightUnits(); ?>" type="hidden" />
+    <input name="dimension_units" value="<?php echo $this->getDimensionUnits(); ?>" type="hidden" />
+    <div class="box-left">
+	<!--Order Information-->
+	<?php $orderAdminDate = $this->formatDate($_order->getCreatedAtDate(), 'medium', true); ?>
+	<?php $orderStoreDate = $this->formatDate($_order->getCreatedAtStoreDate(), 'medium', true); ?>
+	<div class="entry-edit">
+	    <?php if ($_order->getEmailSent()):
+		$_email = Mage::helper('sales')->__('the order confirmation email was sent');
+	    else:
+		$_email = Mage::helper('sales')->__('the order confirmation email is not sent');
+	    endif; ?>
+	    <div style="" class="entry-edit-head">
+		<a href="<?php echo $this->getOrderUrl(); ?>"><?php echo Mage::helper('sales')->__('Order # %s', $_order->getRealOrderId()) ?></a>
+		<strong>(<?php echo $_email ?>)</strong>
+	    </div>
+	    <div class="fieldset">
+		<table cellspacing="0" class="form-list">
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Order Date') ?></label></td>
+		    <td><strong><?php echo $orderAdminDate ?></strong></td>
+		</tr>
+		<?php if ($orderAdminDate != $orderStoreDate):?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Order Date (%s)', $_order->getCreatedAtStoreDate()->getTimezone()) ?></label></td>
+		    <td><strong><?php echo $orderStoreDate ?></strong></td>
+		</tr>
+		<?php endif;?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Order Status') ?></label></td>
+		    <td><strong><span id="order_status"><?php echo $_order->getStatusLabel() ?></span></strong></td>
+		</tr>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Purchased From') ?></label></td>
+		    <td><strong><?php echo nl2br($_order->getStoreName()); ?></strong></td>
+		</tr>
+		<?php if($_order->getRemoteIp()): ?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Placed from IP') ?></label></td>
+		    <td><strong><?php echo $_order->getRemoteIp(); echo ($_order->getXForwardedFor())?' (' . $_order->getXForwardedFor() . ')':''; ?></strong></td>
+		</tr>
+		<?php endif; ?>
+		<?php if($_order->getGlobalCurrencyCode() != $_order->getBaseCurrencyCode()): ?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('%s / %s rate:', $_order->getGlobalCurrencyCode(), $_order->getBaseCurrencyCode()) ?></label></td>
+		    <td><strong><?php echo $_order->getBaseToGlobalRate() ?></strong></td>
+		</tr>
+		<?php endif; ?>
+		<?php if($_order->getBaseCurrencyCode() != $_order->getOrderCurrencyCode()): ?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('%s / %s rate:', $_order->getOrderCurrencyCode(), $_order->getBaseCurrencyCode()) ?></label></td>
+		    <td><strong><?php echo $_order->getBaseToOrderRate() ?></strong></td>
+		</tr>
+		<?php endif; ?>
+		<tr>
+                    <td class="label"><label><?php echo Mage::helper('sales')->__('Carrier') ?></label></td>
+                    <td><strong><?php echo $this->getCarrierTitle(); ?></strong></td>
+                </tr>                
+                <tr>
+                    <td class="label"><label><?php echo Mage::helper('sales')->__('Shipping Method') ?></label></td>
+                    <td><strong><select name="method">
+                        <?php foreach ($this->getAllowedMethods() as $method) { ?>
+                            <?php echo '<option value="' . $method . '"'; if ($method == $this->getMethodCode()) echo " SELECTED";
+                                  echo '>' . $this->getCarrier()->getCode('method', $method) . '</option>'; ?>
+                        <?php } ?>
+                        </select></strong>
+                    </td>
+                </tr>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Shipping Amount') ?></label></td>
+		    <td><strong><?php echo Mage::helper('core')->currency($_order->getShippingAmount()); ?></strong></td>
+		</tr>
+		<tr>
+                    <td class="label"><label>COD</label></td>
+                    <td><strong><select name="cod">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                        </select></strong>
+                    </td>
+                </tr>
+		<tr>
+		    <td class="label"><label>COD Collection Amount</label></td>
+		    <td><input class="input-text" name="cod_amount" value="" /></td>
+		</tr>
+		<tr>
+		    <td class="label"><label>Insure Amount</label></td>
+		    <td><input type="text" name='insure_amount' value='<?php echo number_format($_order->getSubtotal(),2); ?>' /></td>
+		</tr>
+		<tr>
+		    <td class="label"><label>Insure Shipment</label></td>
+		    <td><input type="checkbox" name='insure_shipment' value='1' /></td>
+		</tr>
+		<tr>
+		    <td class="label"><label>Require Signature</label></td>
+		    <td><input type="checkbox" name='require_signature' value='1' /></td>
+		</tr>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Customer Name') ?></label></td>
+		    <td>
+		    <?php if ($_customerUrl=$this->getCustomerViewUrl()) : ?>
+			<a href="<?php echo $_customerUrl ?>" target="_blank"><strong><?php echo $this->htmlEscape($_order->getCustomerName()) ?></strong></a>
+		    <?php else: ?>
+			<strong><?php echo $this->htmlEscape($_order->getCustomerName()) ?></strong>
+		    <?php endif; ?>
+		    </td>
+		</tr>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Email') ?></label></td>
+		    <td><a href="mailto:<?php echo $_order->getCustomerEmail() ?>"><strong><?php echo $_order->getCustomerEmail() ?></strong></a></td>
+		</tr>
+		<?php if ($_groupName=$this->getCustomerGroupName()) : ?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Customer Group') ?></label></td>
+		    <td><strong><?php echo $_groupName ?></strong></td>
+		</tr>
+		<?php endif; ?>
+		<tr>
+		    <td class="label"><label>Send Shipment Confirmation</label></td>
+		    <td valign="bottom"><input type="checkbox" name="confirmation" checked></td>
+		</tr>
+		<?php if ($_dob=$this->getOrder()->getCustomerDob()) : ?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('Date of Birth') ?></label></td>
+		    <td><strong><?php echo Mage::helper('core')->formatDate($_dob, 'medium') ?></strong></td>
+		</tr>
+		<?php endif; ?>
+		<?php if ($_taxvat = $_order->getCustomerTaxvat()):?>
+		<tr>
+		    <td class="label"><label><?php echo Mage::helper('sales')->__('TAX/VAT Number') ?></label></td>
+		    <td><strong><?php echo $this->htmlEscape($_taxvat)?></strong></td>
+		</tr>
+		<?php endif;?>
+	    </table>
+	</div>
+    </div>
+</div>
+
+<div class="box-right">
+    <!--Shipping Address-->
+    <?php $shippingAddress = $_order->getShippingAddress(); ?>
+    <div class="entry-edit">
+        <div class="entry-edit-head">
+            <h4 class="icon-head head-shipping-address"><?php echo Mage::helper('sales')->__('Shipping Address') ?></h4>
+        </div>
+        <div class="fieldset">
+            <div class="hor-scroll">
+                <table cellspacing="0" class="form-list">
+		    <tr>
+			<td class="label"><label>Name</label></td>
+			<td><input class="input-text required-entry" name="recipient_name" value="<?php echo $shippingAddress->getName(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Company</label></td>
+			<td><input class="input-text" name="recipient_company" value="<?php echo $shippingAddress->getCompany(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Address</label></td>
+			<td><input class="input-text required-entry" size="45" name="recipient_street1" value="<?php echo $shippingAddress->getStreet1(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Address (2)</label></td>
+			<td><input class="input-text" size="45" name="recipient_street2" value="<?php echo $shippingAddress->getStreet2(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Address (3)</label></td>
+			<td><input class="input-text" size="45" name="recipient_street3" value="<?php echo $shippingAddress->getStreet3(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>City</label></td>
+			<td><input class="input-text required-entry" name="recipient_city" value="<?php echo $shippingAddress->getCity(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>State/Region</label></td>
+			<td><input class="input-text" name="recipient_region" value="<?php
+			    if ($shippingAddress->getRegionCode() == '') { echo $shippingAddress->getRegion(); } else { echo $shippingAddress->getRegionCode(); } ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Postal Code</label></td>
+			<td><input class="input-text" size="9" name="recipient_postcode" value="<?php echo $shippingAddress->getPostcode(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Country</label></td>
+			<td><input class="input-text required-entry" name="recipient_country" value="<?php echo $shippingAddress->getCountry(); ?>" /></td>
+		    </tr>
+		    <tr>
+			<td class="label"><label>Telephone</label></td>
+			<td><input class="input-text required-entry" name="recipient_telephone" value="<?php echo $shippingAddress->getTelephone(); ?>" /></td>
+		    </tr>
+		</table>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="entry-edit-head">
+    <h4 class="fieldset-legend">Items</h4>
+</div>
+<div class="grid np">
+  <div class="hor-scroll">
+    <table cellspacing="0" class="data order-tables">
+	<thead>
+            <tr class="headings">
+		<th><?php echo $this->helper('sales')->__('Item ID') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product ID') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product SKU') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product Name') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product Weight (' . $this->getWeightUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product Length (' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product Width (' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product Height (' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Product Volume (CU ' . $this->getDimensionUnits() . ')') ?></th>
+                <th><?php echo $this->helper('sales')->__('Dangerous Goods') ?></th>
+                <th><span class="nobr"><?php echo $this->helper('sales')->__('Item Status') ?></span></th>
+            </tr>
+        </thead>
+        <?php $items = $this->getItems() ?>
+        <?php $i=0; foreach ($items as $item):?>
+	    <input type="hidden" name="items[<?php echo $i; ?>][item_id]" value="<?php echo $item['id']; ?>" />
+            <tbody class="<?php echo $i%2?'even':'odd' ?>">
+                <tr>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][id]" value="<?php echo $i+1; ?>" /><strong><?php echo $i+1; ?></strong></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][product_id]" value="<?php echo $item['product_id']; ?>" /><?php echo $item['product_id']; ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][sku]" value="<?php echo $item['sku']; ?>" /><?php echo $item['sku']; ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][name]" value="<?php echo $item['name']; ?>" /><?php echo $item['name']; ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][weight]" value="<?php echo $item['weight']; ?>" /><?php echo $item['weight']; ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][length]" value="<?php echo $item['length']; ?>" /><?php if (!empty($item['length'])) { echo $item['length']; } else { echo '-'; } ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][width]" value="<?php echo $item['width']; ?>" /><?php if (!empty($item['width']))	 { echo $item['width']; } else { echo '-'; } ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][height]" value="<?php echo $item['height']; ?>" /><?php if (!empty($item['height'])) { echo $item['height']; } else { echo '-'; } ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][volume]" value="<?php echo $item['volume']; ?>" /><?php if (!empty($item['volume'])) { echo $item['volume']; } else { echo '-'; } ?></td>
+                    <td><input type="hidden" name="items[<?php echo $i; ?>][dangerous]" value="<?php echo $item['dangerous']; ?>" /><?php if ($item['dangerous']) { echo '&#10003'; } else { echo '-'; } ?></td>
+		    <td><input type="hidden" name="items[<?php echo $i; ?>][status]" value="<?php echo $item['status']; ?>" /><?php echo $item['status']; ?></td>
+		</tr>
+            </tbody>
+        <?php $i++; endforeach; ?>
+    </table>
+  </div>
+</div>
+<div class="clear"></div>
+<br />
+<div class="entry-edit-head">
+    <h4 class="fieldset-legend">Estimated Packages</h4>
+</div>
+<div class="grid np">
+  <div class="hor-scroll">
+    <table cellspacing="0" class="data order-tables">
+        <thead>
+            <tr class="headings">
+		<th><?php echo $this->helper('sales')->__('Package ID') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Type') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Items') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Weight (' . $this->getWeightUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Length (' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Width (' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Height (' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Package Volume (CU ' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Max Package Volume (CU ' . $this->getDimensionUnits() . ')') ?></th>
+		<th><?php echo $this->helper('sales')->__('Percentage Packed') ?></th>
+            </tr>
+        </thead>
+        <?php $packages = $this->getPackages() ?>
+        <?php $i=1; $z=0; foreach ($packages as $package):?>
+            <tbody class="<?php echo $i%2?'even':'odd' ?>">
+                <tr>
+		    <td><?php echo $i; $i++; ?></td>
+		    <td><?php echo $package['type']; ?></td>
+		    <td><?php $n=0; foreach ($package['items'] as $item) { echo $z+1; $z++; $n++; if ($n < count($package['items'])) { echo ','; }} ?></td>
+		    <td><?php echo $package['weight']; ?></td>
+		    <td><?php echo $package['length']; ?></td>
+		    <td><?php echo $package['width']; ?></td>
+		    <td><?php echo $package['height']; ?></td>
+		    <td><?php if (isset($package['volume'])) { echo $package['volume']; } ?></td>
+		    <td><?php if (isset($package['max_volume'])) { echo $package['max_volume']; } else { echo '-'; } ?></td>
+		    <td><?php if (isset($package['max_volume']) && isset($package['volume'])) { echo round($package['volume']/$package['max_volume'], 2)*100; } else { echo '100'; } ?>%</td>
+		</tr>
+            </tbody>
+        <?php endforeach; ?>
+    </table>
+  </div>
+</div>
+<div class="clear"></div>
+<br />
+<div class="entry-edit-head">
+    <h4 class="fieldset-legend">Actual Shipment Request</h4>
+</div>
+<div class="grid np">
+    <div class="hor-scroll">
+	<table cellspacing="0" class="data order-tables" id="package_table">
+	    <thead>
+		<tr class="headings">
+		    <th><?php echo $this->helper('sales')->__('Package ID') ?></th>
+		    <th><?php echo $this->helper('sales')->__('Package Items') ?></th>
+		    <th><?php echo $this->helper('sales')->__('Package Weight (' . $this->getWeightUnits() . ')') ?></th>
+		    <th><?php echo $this->helper('sales')->__('Package Length (' . $this->getDimensionUnits() . ')') ?></th>
+		    <th><?php echo $this->helper('sales')->__('Package Width (' . $this->getDimensionUnits() . ')') ?></th>
+		    <th><?php echo $this->helper('sales')->__('Package Height (' . $this->getDimensionUnits() . ')') ?></th>
+		</tr>
+	    </thead>
+	    <tbody class="<?php echo $i%2?'even':'odd' ?>">
+		<?php $i=0; $z=0; foreach ($this->getPackages() as $package) { ?>
+		    <tr>
+			<td><?php echo $i+1; ?></td>
+			<td class="input-ele"><input class="input-text required-entry" name="packages[<?php echo $i; ?>][items]" value="<?php $n=0; foreach ($package['items'] as $item) { echo $z+1; $z++; $n++; if ($n < count($package['items'])) { echo ','; }} ?>" /></td>
+			<td class="input-ele"><input class="input-text required-entry" name="packages[<?php echo $i; ?>][weight]" value="<?php echo $package['weight']; ?>" /></td>
+			<td class="input-ele"><input class="input-text required-entry" name="packages[<?php echo $i; ?>][length]" value="<?php echo $package['length']; ?>" /></td>
+			<td class="input-ele"><input class="input-text required-entry" name="packages[<?php echo $i; ?>][width]" value="<?php echo $package['width']; ?>" /></td>
+			<td class="input-ele"><input class="input-text required-entry" name="packages[<?php echo $i; ?>][height]" value="<?php echo $package['height']; ?>" /></td>
+		    </tr>
+		<?php $i++; } ?>
+	        <input type="hidden" id="number_of_packages" value="<?php echo $i; ?>" />
+	    </tbody>
+	</table>
+    </div>
+</div>
+<br />
+<div align="right">
+    <button onclick="deletePackage();" class="none" type="button"><span><?php echo $this->__('Delete Package') ?></span></button>
+    <button onclick="addPackage();" class="none" type="button"><span><?php echo $this->__('Add Package') ?></span></button>
+</div>
+<br />
+<div align="right">
+    <button onclick="editForm.submit()" class="scalable save" type="button"><span>Create shipment</span></button>
+</div>
+</form>
+<script type="text/javascript">
+    var editForm = new varienForm('edit_form');
+
+    function addPackage()
+    {
+	var pkgtable = $('package_table');
+	var newrow = pkgtable.insertRow(pkgtable.rows.length);
+	var numpackages = parseInt($('number_of_packages').value);
+
+	newrow.id = numpackages;
+
+	newcell = newrow.insertCell(0);
+	newcell.innerHTML = numpackages + 1;
+
+	newcell = newrow.insertCell(1);
+	newcell.innerHTML = '<input class="input-text required-entry" name="packages[' + numpackages + '][items]" />';
+
+	newcell = newrow.insertCell(2);
+	newcell.innerHTML = '<input class="input-text required-entry" name="packages[' + numpackages + '][weight]" />';
+
+	newcell = newrow.insertCell(3);
+	newcell.innerHTML = '<input class="input-text required-entry" name="packages[' + numpackages + '][length]" />';
+
+	newcell = newrow.insertCell(4);
+	newcell.innerHTML = '<input class="input-text required-entry" name="packages[' + numpackages + '][width]" />';
+
+	newcell = newrow.insertCell(5);
+	newcell.innerHTML = '<input class="input-text required-entry" name="packages[' + numpackages + '][height]" />';
+
+	$('number_of_packages').value = numpackages + 1;
+
+	return true;
+    }
+
+    function deletePackage()
+    {
+	var numpackages = parseInt($('number_of_packages').value);
+	var pkgtable = $('package_table');
+	if (numpackages > 1) {
+	pkgtable.deleteRow(pkgtable.rows.length-1);
+	$('number_of_packages').value = numpackages - 1; }
+	return true;
+    }
+
+</script>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<checkoutpromo_adminhtml_checkoutpromo_index>
+		<reference name="content">
+			<block type="checkoutpromo/adminhtml_checkoutpromo" name="checkoutpromo" />
+		</reference>
+	</checkoutpromo_adminhtml_checkoutpromo_index>
+</layout>

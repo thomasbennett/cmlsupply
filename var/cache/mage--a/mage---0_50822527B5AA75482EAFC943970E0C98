@@ -1,0 +1,14 @@
+<block type="sales/order_email_shipment_items" name="items" template="email/order/shipment/items.phtml">
+   <action method="addItemRender">
+      <type>default</type>
+      <block>sales/order_email_items_default</block>
+      <template>email/order/items/shipment/default.phtml</template>
+   </action>
+</block>
+<reference name="items">
+   <action method="addItemRender">
+      <type>bundle</type>
+      <block>bundle/sales_order_items_renderer</block>
+      <template>bundle/email/order/items/shipment/default.phtml</template>
+   </action>
+</reference>

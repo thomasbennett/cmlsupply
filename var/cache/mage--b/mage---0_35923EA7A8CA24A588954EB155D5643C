@@ -1,0 +1,6 @@
+<reference name="root">
+   <block type="core/text_list" name="content"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_search_grid" name="grid"/>
+</reference>

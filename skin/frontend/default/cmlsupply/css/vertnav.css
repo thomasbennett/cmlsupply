@@ -1,0 +1,120 @@
+.vertnav-container {
+}
+
+#vertnav ul{
+	padding: 0;
+	margin: 0;
+	display:block;
+	list-style:none;
+	list-style-type:none;
+}
+
+#vertnav li{
+	padding: 0;
+	margin: 0;
+	display:block;
+	list-style:none;
+	list-style-type:none;
+}
+
+#vertnav  span{
+	background-color:#68736a;
+	border-top:2px dotted #A2A3A7;
+	display:block;
+	padding:10px;
+	width:175px;
+	color: #0A263C;
+	text-decoration: none;
+	font-size: 10pt;
+	letter-spacing: -1px;
+	font-weight: bold;
+	margin: 0;
+}
+
+
+#vertnav span:hover{
+	background-color: #C2C3C7;
+}
+
+#vertnav .inactive a {
+	
+}
+
+
+#vertnav .next a {
+
+}
+
+#vertnav .prev a {
+
+}
+
+#vertnav .first span {
+	border: none
+}
+
+#vertnav .last a {
+
+}
+
+#vertnav .only a {
+}
+
+#vertnav li.parent a  span{
+	background-color:#bcbdc1;
+	font-weight:bold;
+}
+
+#vertnav li.active a  span{
+	background-color: #bcbdc1;
+	font-weight:bold;
+}
+
+#vertnav li.inactive a  span{
+}
+
+#vertnav .level0  span{
+	padding:8px;
+
+}
+
+#vertnav .level0 a  span:hover{
+	background-color: #C2C3C7;
+}
+
+
+#vertnav .level1  span{
+	color: #0A263C;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:25px;
+	width:158px;
+}
+
+#vertnav .level1  span:hover{
+	background-color: #C2C3C7;
+}
+
+#vertnav .level2  span{
+	color: #0A263C;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:40px;
+	width:145px;
+}
+
+#vertnav .level2  span:hover{
+	background-color: #C2C3C7;
+}
+
+#vertnav .level3 span{
+	color: #0A263C;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:55px;
+	width:130px;
+}
+
+#vertnav .level3 span{
+	background-color: #bcbdc1;
+}

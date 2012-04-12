@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Testing Area of T-HUB Service</title>
+<style>
+   TD       {FONT-SIZE:12pt;    FONT-FAMILY:Tahoma;     FONT-WEIGHT:bold;}
+   FORM     {MARGIN-TOP :1px;   MARGIN-BOTTOM   :5px;}
+   HR       {MARGIN-TOP :0px;   MARGIN-BOTTOM   :0px;   LINE-HEIGHT:3px;}
+   A        {COLOR:#666666;     TEXT-DECORATION :none;}
+   A:hover  {COLOR:#000000;}
+   TEXTAREA {BORDER-RIGHT: #224466 1px solid; BORDER-TOP: #224466 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #224466 1px solid; COLOR: #334466; BORDER-BOTTOM: #224466 1px solid; FONT-FAMILY: Verdana,Arial,Sans-Serif; BACKGROUND-COLOR: #f2f2f2}
+   INPUT    {BORDER-RIGHT: #224466 1px solid; BORDER-TOP: #224466 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #224466 1px solid; COLOR: #222222; BORDER-BOTTOM: #224466 1px solid; FONT-FAMILY: Verdana,Arial,Sans-Serif; BACKGROUND-COLOR: #eeeeee}
+   .copyright{ FONT-SIZE:8pt; FONT-FAMILY:Tahoma; FONT-WEIGHT:normal; }
+</style>
+<SCRIPT language="JavaScript">
+function testWebService(myform)
+{
+	url = "thubservice.php";
+	login = myform.login.value ;
+	password = myform.password.value ;
+	req = "<REQUEST Version='1.0'><RequestID>0</RequestID><Command>GetOrders</Command><UserID>" + login + "</UserID><Password>" + password + "</Password><Status>all</Status><SecurityKey>xz</SecurityKey><LimitOrderCount>25</LimitOrderCount><OrderStartNumber>0</OrderStartNumber><exclude-orders></exclude-orders></REQUEST>";
+     myform.request.value = req;
+
+	myform.action = url;
+    return true;
+}
+</SCRIPT>
+</head>
+<body bgcolor="#FFFFFF" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" width="100%">
+
+<table cellspacing="0" cellpadding="8" border="0" width="100%">
+   <tr><td  align = "center" style="background-color:#888888; color:white">
+   Testing Area of T-HUB Service</tr>
+</table>
+
+<table cellspacing="1" cellpadding="7" border="0">
+  <tr>
+    <td>
+      <p>Installation test for T-HUB web service</p>
+      <font color="#993300" size="-2" face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#0066CC" size="-1">Please
+      enter your website admin login, password and click &quot;Test T-HUB Web
+      Service button&quot; </font></strong></font>
+      <form method="post" name="form_testWebService" onSubmit="return testWebService(this);" target="_blank">
+        <table width="75%" border="1" cellpadding="2" cellspacing="1" bordercolor="#999999">
+          <tr bordercolor="#999999" bgcolor="#FFFFFF">
+            <td>
+              <div align="right"><font size="-1">Login:</font></div></td>
+            <td>
+              <input type="text" name="login"></td>
+          </tr>
+          <tr bordercolor="#999999" bgcolor="#FFFFFF">
+            <td>
+              <div align="right"><font size="-1">Password</font>:</div></td>
+            <td>
+              <input type="text" name="password"></td>
+          </tr>
+          <tr bordercolor="#999999" bgcolor="#FFFFFF">
+            <td colspan="2">
+              <div align="center">
+                <input name="submit" type="submit" value="Test T-HUB Web Service">
+              </div></td>
+          </tr>
+        </table>
+        <p><br>
+          <input type="hidden" name="request"></input>
+          <br>
+        </p>
+        </form>
+
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td> GetOrders Request
+      <form action="thubservice.php" method="post" name="getOrders" target="_blank">
+        <textarea cols="75" rows="15" name="request">
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST Version="1.0">
+   <RequestID>07512005171715</RequestID>
+   <Command>GetOrders</Command>
+   <UserID>testuser</UserID>
+   <Password>testpassword</Password>
+   <Status>all</Status>
+   <Provider>COMPANY 3456.ru</Provider>
+   <LimitOrderCount>25</LimitOrderCount>
+   <OrderStartNumber>0</OrderStartNumber>
+   <NumberOfDays>6</NumberOfDays>
+   <SecurityKey></SecurityKey>
+</REQUEST>
+         </textarea>
+        <br>
+        <input type="submit">
+      </form></td>
+    <td> UpdateOrdersPaymentStatus Request
+      <form action="thubservice.php" method="post" name="updateOrders" target="_blank">
+        <textarea cols="75" rows="15" name="request">
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST Version="1.0">
+  <RequestID>07562005171526</RequestID>
+  <Command>updateOrdersPaymentStatus</Command>
+  <UserID>testuser</UserID>
+  <Password>testpassword</Password>
+  <SecurityKey>xyz</SecurityKey>
+   <Orders>
+      <Order>
+         <HostOrderID>11</HostOrderID>
+         <LocalOrderID>4123</LocalOrderID>
+         <PaymentStatus>Pending</PaymentStatus>
+         <ClearedOn />
+      </Order>
+      <Order>
+         <HostOrderID>12</HostOrderID>
+         <LocalOrderID>4123</LocalOrderID>
+         <PaymentStatus>Cleared</PaymentStatus>
+         <ClearedOn>12/04/2006</ClearedOn>
+      </Order>
+   </Orders>
+</REQUEST>
+          </textarea>
+        <br>
+        <input type="submit">
+      </form></td>
+  </tr>
+  <tr>
+    <td valign="top"> UpdateShippingStatus Request
+      <form action="thubservice.php" method="post" name="updShippingStatus" target="_blank">
+        <textarea cols="75" rows="15" name="request">
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST Version="1.0">
+  <RequestID>07562005171526</RequestID>
+  <Command>updateOrdersShippingStatus</Command>
+  <UserID>testuser</UserID>
+  <Password>testpassword</Password>
+  <SecurityKey>xyz</SecurityKey>
+   <Orders>
+      <Order>
+         <HostOrderID>1</HostOrderID>
+         <LocalOrderID>4122</LocalOrderID>
+         <NotifyCustomer>Yes</NotifyCustomer>
+         <ShippedOn>12/05/2006</ShippedOn>
+         <ShippedVia>UPS</ShippedVia>
+         <ServiceUsed>Ground</ServiceUsed>
+         <TrackingNumber>Z31212215475</TrackingNumber>
+      </Order>
+      <Order>
+         <HostOrderID>2</HostOrderID>
+         <LocalOrderID>4123</LocalOrderID>
+         <NotifyCustomer>No</NotifyCustomer>
+         <ShippedOn>12/04/2006</ShippedOn>
+         <ShippedVia>FEDEX</ShippedVia>
+         <ServiceUsed>2nd Day Air</ServiceUsed>
+         <TrackingNumber>F33452234275</TrackingNumber>
+      </Order>
+      <Order>
+         <HostOrderID>5</HostOrderID>
+         <LocalOrderID>4123</LocalOrderID>
+         <NotifyCustomer>yes</NotifyCustomer>
+         <ShippedOn>12/04/2006</ShippedOn>
+         <ShippedVia>FEDEX</ShippedVia>
+         <ServiceUsed>2nd Day Air</ServiceUsed>
+         <TrackingNumber>F33452234275</TrackingNumber>
+      </Order>
+      <Order>
+         <HostOrderID>7</HostOrderID>
+         <LocalOrderID>4123</LocalOrderID>
+         <NotifyCustomer>Yes</NotifyCustomer>
+         <ShippedOn>12/04/2006</ShippedOn>
+         <ShippedVia>FEDEX</ShippedVia>
+         <ServiceUsed>2nd Day Air</ServiceUsed>
+         <TrackingNumber>F33452234275</TrackingNumber>
+      </Order>
+      <Order>
+         <HostOrderID>11</HostOrderID>
+         <LocalOrderID>4123</LocalOrderID>
+         <NotifyCustomer>Yes</NotifyCustomer>
+         <ShippedOn>12/04/2006</ShippedOn>
+         <ShippedVia>FEDEX</ShippedVia>
+         <ServiceUsed>2nd Day Air</ServiceUsed>
+         <TrackingNumber>F33452234275</TrackingNumber>
+      </Order>
+   </Orders>
+</REQUEST>
+          </textarea>
+        <br>
+        <input type="submit">
+      </form></td>
+    <td>Update Inventory Request<br>
+<form action="thubservice.php" method="post" name="getOrders" target="_blank">
+    <textarea cols="80" rows="40" name="request">
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST Version="1.0">
+            <RequestID>07512005171715</RequestID>
+            <Command>updateInventory</Command>
+            <UserID>testuser</UserID>
+            <Password>testpassword</Password>
+            <AddProducts>0</AddProducts>
+            <AddCategory>0</AddCategory>
+            <AddManufacturer>0</AddManufacturer>
+            <UpdateDescription>0</UpdateDescription>
+            <UpdatePrice>1</UpdatePrice>
+            <UpdateInventory>1</UpdateInventory>
+          <Items>
+               <Item>
+                  <ItemCode>MR3445</ItemCode>
+                  <ItemCodeParent>SKU10000</ItemCodeParent>
+                  <ItemName>MS00</ItemName>
+                  <ItemDescription>Benn jerry blue premium</ItemDescription>
+                  <Category>Category/Category2</Category>
+                  <Manufacturer>SKU10000</Manufacturer>
+                  <Price>38.50</Price>
+                  <SalePrice>48.50</SalePrice>
+                  <UnitWeight>2</UnitWeight>
+                  <QuantityInStock>126</QuantityInStock>
+                  <ItemOption Name="Color">blue</ItemOption>
+                  <ItemOption Name="Size">Premium</ItemOption>
+               </Item>
+               <Item>
+                  <ItemCode>HP2324</ItemCode>
+                  <ItemCodeParent>SKU10000</ItemCodeParent>
+                  <ItemName>MS00</ItemName>
+                  <ItemDescription>printer HP 2324</ItemDescription>
+                  <Category>SKU10000</Category>
+                  <Manufacturer>SKU10000</Manufacturer>
+                  <Price>38.50</Price>
+                  <SalePrice>48.50</SalePrice>
+                  <UnitWeight>2</UnitWeight>
+                  <QuantityInStock>12</QuantityInStock>
+                  <ItemOption Name="Color">white</ItemOption>
+                  <ItemOption Name="Size">small</ItemOption>
+               </Item>
+            </Items>
+</REQUEST>
+
+  </textarea><br>
+    <input type="submit">
+</form></td>
+  </tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+   <tr><td style="color:#666666;" class="copyright" align="center">
+   <hr size=1 style="color:#CCCCCC">
+   &nbsp;&nbsp;&nbsp;Copyright &copy; &nbsp;&nbsp;&nbsp;
+   <hr size=3 style="color:#999999">
+   </td></tr>
+</table>
+</body>
+</html>
+

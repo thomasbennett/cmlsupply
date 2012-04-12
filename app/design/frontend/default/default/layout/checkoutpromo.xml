@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="1.0">
+    <default>        
+    </default>
+    <checkout_cart_index>
+        <reference name="content">
+            <block type="checkoutpromo/checkoutpromo" name="shoppingcartpromo" template="checkoutpromo/checkoutpromo.phtml"  before="-" />            
+        </reference>
+    </checkout_cart_index>
+    <checkout_onepage_index>
+        <reference name="content">
+            <block type="checkoutpromo/checkoutpromo" name="checkoutpromo" template="checkoutpromo/checkoutpromo.phtml"  before="-" />            
+        </reference>
+    </checkout_onepage_index>
+</layout> 

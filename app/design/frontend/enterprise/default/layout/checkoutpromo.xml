@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="1.0">    
+    <checkout_cart_index>
+        <reference name="content">
+            <block type="checkoutpromo/checkoutpromo" name="shoppingcartpromo" template="checkoutpromo/checkoutpromo.phtml"  before="-" />
+        </reference>
+    </checkout_cart_index>
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>aw_checkoutpromo/css/checkoutpromo.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="checkoutpromo/checkoutpromo" name="checkoutpromo" template="checkoutpromo/checkoutpromo.phtml"  before="-" />
+        </reference>
+    </checkout_onepage_index>
+</layout> 

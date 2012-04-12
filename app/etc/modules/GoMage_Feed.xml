@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**     
+ * GoMage.com
+ *
+ * GoMage Feed Pro
+ * @category     Extension
+ * @copyright    Copyright (c) 2010 GoMage.com (http://www.gomage.com)
+ * @author       GoMage.com
+ * @license      http://www.gomage.com/licensing  Single domain license
+ * @terms of use http://www.gomage.com/terms-of-use
+ * @version      Release: 1.1
+ */ 
+ -->
+
+<config>
+    <modules>
+        <GoMage_Feed>
+            <active>true</active>
+            <codePool>local</codePool>
+        </GoMage_Feed>
+	</modules>
+</config>

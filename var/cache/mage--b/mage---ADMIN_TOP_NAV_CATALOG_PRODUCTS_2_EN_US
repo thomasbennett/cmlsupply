@@ -1,0 +1,277 @@
+
+<!-- menu start -->
+
+<!-- menu end -->
+<div class="nav-bar">
+    <ul id="nav">
+                <li  class="   level0"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/dashboard/index/key/4f20b7960072708296e3b5668a0917ac/"   class=""><span>Dashboard</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>Sales</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/sales_order/index/key/4ae646a6dfca0037f85697b79192d99b/"   class=""><span>Orders</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/sales_invoice/index/key/8a31f0726e29e35adceefbc7c149fdd2/"   class=""><span>Invoices</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/sales_shipment/index/key/75369c665b9ae14de547d4915b500b52/"   class=""><span>Shipments</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/sales_creditmemo/index/key/d485311491e404d157f1dd2f01e45017/"   class=""><span>Credit Memos</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/checkout_agreement/index/key/c163d8d68d2f94efbb78f5cf89b0f244/"   class=""><span>Terms and conditions</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level1"> <a href="#"  onclick="return false" class=""><span>Tax</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tax_rule/index/key/e88668e295be714d2dfd4ea0f9a35490/"   class=""><span>Manage Tax Rules</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tax_rate/index/key/531d387362e8fe0aa6ae3f20ab4376a0/"   class=""><span>Manage Tax Zones & Rates</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tax_rate/importExport/key/203501d4ae8e1b8edacfc9a2a5607fde/"   class=""><span>Import / Export Tax Rates</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tax_class_customer/index/key/a179702a14fbd52ded4ece8bece8734f/"   class=""><span>Customer Tax Classes</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tax_class_product/index/key/45fb051fe3c7e31dd56e9f1b016dd932/"   class=""><span>Product Tax Classes</span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  active  parent level0"> <a href="#"  onclick="return false" class="active"><span>Catalog</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_product/index/key/f893ec6135a417e5b5800bb043a14583/"   class=""><span>Manage Products</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_category/index/key/c3d48dfac9843cec5d0d6eb6bcf118b2/"   class=""><span>Manage Categories</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Attributes</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_product_attribute/index/key/256b753452fc289303374c39e757fbda/"   class=""><span>Manage Attributes</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_product_set/index/key/cb8783f16214dd2407a04d31fbfeaf83/"   class=""><span>Manage Attribute Sets</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/urlrewrite/index/key/f9d84f3c1dfc037127f74a98c9e1f162/"   class=""><span>Url Rewrite Management</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_search/index/key/06def122c673346922473334c64a138f/"   class=""><span>Search</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Reviews and Ratings</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level2"> <a href="#"  onclick="return false" class=""><span>Customer Reviews</span></a>
+                                <ul >
+                <li  class="   level3"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_product_review/pending/key/af9aa14cb648494524b05481322ab220/"   class=""><span>Pending Reviews</span></a>
+                    </li>
+                <li  class="   last level3"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/catalog_product_review/index/key/57a8a88a67b1f495bf40e90e7bd599eb/"   class=""><span>All Reviews</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/rating/index/key/2e549224d01101884a947e147692601d/"   class=""><span>Manage Ratings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Tags</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tag/pending/key/341333e93663c2b05a20948c5088b892/"   class=""><span>Pending Tags</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/tag/index/key/087181a67b75133fa7c6395b3f388304/"   class=""><span>All Tags</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Google Base</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/googlebase/types/index/key/c28781dc1a1c27d05a4c84eba614b286/"   class=""><span>Manage Attributes</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/googlebase/items/index/key/3bf8a8ca40b4b2fe4fd9fe8b589fb102/"   class=""><span>Manage Items</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="https://www.cmlsupply.com/index.php/gomage_feed/adminhtml_items/index/key/710472e604bf723b3618e0740068f3e6/"   class=""><span>Feeds</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/gomage_feed/adminhtml_items/index/key/710472e604bf723b3618e0740068f3e6/"   class=""><span>Manage Feeds</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/gomage_feed/adminhtml_attributes/index/key/7f57cf3ef07eed57ba464a20e00071ea/"   class=""><span>Manage Dynamic Attributes</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/sitemap/index/key/9ab532c5d8bb2881d8caca44a9d198df/"   class=""><span>Google Sitemap</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>Customers</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/customer/index/key/2873a6783a253adbe6b134276c3292ed/"   class=""><span>Manage Customers</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/customer_group/index/key/56c9abf86cc9ffeaffcad299bf21a26b/"   class=""><span>Customer Groups</span></a>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/customer_online/index/key/c766d1158a3d357320f702f6b19ec906/"   class=""><span>Online Customers</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>Promotions</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/promo_catalog/index/key/f7d44f2e31a686104da853c97e6fc37d/"   class=""><span>Catalog Price Rules</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/promo_quote/index/key/58431946477b3b24390ed4186322794b/"   class=""><span>Shopping Cart Price Rules</span></a>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/checkoutpromo/adminhtml_checkoutpromo/index/key/8510fa48f3bd087db6e29de40977633b/"   class=""><span>Checkout Promo Rules</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>Newsletter</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/newsletter_template/index/key/4cdcc882ca91ba3d88c445f32a8a5d9f/"   class=""><span>Newsletter Templates</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/newsletter_queue/index/key/66b208785f5ff4b8d9dee90ae28e6077/"   class=""><span>Newsletter Queue</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/newsletter_subscriber/index/key/c71ee5f6abe4778ce535c1a69b3a770b/"   class=""><span>Newsletter Subscribers</span></a>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/newsletter_problem/index/key/0c06ac11d2579415e671e768e52b9753/"   class=""><span>Newsletter Problem Reports</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>CMS</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/cms_page/index/key/b84c2347ca91ec9514b9be4ccc44e292/"   class=""><span>Manage Pages</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/cms_block/index/key/25963a0c06f2c5b66393ce3e01e6eed4/"   class=""><span>Static Blocks</span></a>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/poll/index/key/c8d453f31828712d0920fd007ec46970/"   class=""><span>Poll Manager</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>Reports</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Sales</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_sales/sales/key/1cc75acb4d621f66911872697086cbc4/"   class=""><span>Sales Report</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_sales/tax/key/5ece53da847e72ead8ffd14ceb36b3c6/"   class=""><span>Tax</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_sales/shipping/key/57e38cb7c553edc5ac4325e5f2282563/"   class=""><span>Shipping</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_sales/invoiced/key/9b02c0ae43a0a9696e2eff68e8876c69/"   class=""><span>Total invoiced</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_sales/refunded/key/32700bbb334de1292478aa40d57a37ed/"   class=""><span>Total refunded</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_sales/coupons/key/a87643a2a183e2270de899057b5b01e9/"   class=""><span>Coupons</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Shopping Cart</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_shopcart/product/key/0c9193141b077f9bc03744a0b5bf4ebf/"   class=""><span>Products in carts</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_shopcart/abandoned/key/04e216ed703bf4d7f9652cda04fc26c5/"   class=""><span>Abandoned carts</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Products</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_product/ordered/key/c3c875da37da43617141b705b7cf2350/"   class=""><span>Bestsellers</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_product/sold/key/40daf3628cd74e00445c60e364840fbb/"   class=""><span>Products Ordered</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_product/viewed/key/e0a839440b8e51f3cee9a4d3ef45e645/"   class=""><span>Most Viewed</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_product/lowstock/key/c5bc8029b63c08b2fd4ee3b4e6cd8e9a/"   class=""><span>Low stock</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_product/downloads/key/bfdf632aa335199790996c85c2267e74/"   class=""><span>Downloads</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Customers</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_customer/accounts/key/75da2920ccdeff13b7f1ef2034bef31b/"   class=""><span>New Accounts</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_customer/totals/key/f4fe9123d1f0d0d5c056bdaabc62fca1/"   class=""><span>Customers by orders total</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_customer/orders/key/0133fb0c9a07d9bf8512601a589a17c6/"   class=""><span>Customers by number of orders</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Reviews</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_review/customer/key/4c76830abcb9169942ed05aa0d364f1d/"   class=""><span>Customers Reviews</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_review/product/key/cb944c9942438bad4abd39bcd2da4eba/"   class=""><span>Products Reviews</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Tags</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_tag/customer/key/b4e26cecb2555028623b92e992d653a6/"   class=""><span>Customers</span></a>
+                    </li>
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_tag/product/key/de51b2dda46c0ab6344ab76c7b174d93/"   class=""><span>Products</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report_tag/popular/key/5cf77e3061a4c88a99c8140f6998842a/"   class=""><span>Popular</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/report/search/key/b456fad333ea3e12f8fbc9471d221afb/"   class=""><span>Search Terms</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0"> <a href="#"  onclick="return false" class=""><span>System</span></a>
+                                <ul >
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_account/index/key/d817f4b5d409bf4c70ddadd7230d5201/"   class=""><span>My Account</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/notification/index/key/98a9d9ca882b78221f6000d30b700eed/"   class=""><span>Notifications</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Tools</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_backup/index/key/18dae704082a481563b71b05e7d5797e/"   class=""><span>Backups</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/compiler/process/index/key/662de98d1dff3439b1f9991371b4a90b/"   class=""><span>Compilation (Beta)</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Web Services</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/api_user/index/key/a5d941977c7db4d2efe971848ea62251/"   class=""><span>Users</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/api_role/index/key/438960184bd25a3a4f4299c5ab94d0ba/"   class=""><span>Roles</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_design/index/key/f9aad451cb3cf74571f764b217fe8b64/"   class=""><span>Design</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Import/Export</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_convert_gui/index/key/3998cab2533de43336a74352b7986404/"   class=""><span>Profiles</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_convert_profile/index/key/218dfd45f11982e93a9ef63ba65427c5/"   class=""><span>Advanced Profiles</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_currency/index/key/6283bd272857ee44d95a0953b89bd4b7/"   class=""><span>Manage Currency Rates</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_email_template/index/key/fbfd97a01f19207abeed7d917067187c/"   class=""><span>Transactional Emails</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Permissions</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/permissions_user/index/key/407bd7fb2f58daf055b28f23a7c64c8d/"   class=""><span>Users</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/permissions_role/index/key/703018c8c10cfe06242e316228d47ecf/"   class=""><span>Roles</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1"> <a href="#"  onclick="return false" class=""><span>Magento Connect</span></a>
+                                <ul >
+                <li  class="   level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/extensions_local/index/key/3403d7ccf3db0258ec6ea3994ecc05bb/"   class=""><span>Magento Connect Manager</span></a>
+                    </li>
+                <li  class="   last level2"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/extensions_custom/index/key/02bf6b9645332364d7a02ce1b4b0d511/"   class=""><span>Package Extensions</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_cache/index/key/0dd4657df321c8e5664134f408ce248c/"   class=""><span>Cache Management</span></a>
+                    </li>
+                <li  class="   level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_store/index/key/2326b8fcb67c1d7707fe7c1fe025f0f6/"   class=""><span>Manage Stores</span></a>
+                    </li>
+                <li  class="   last level1"> <a href="https://www.cmlsupply.com/index.php/cmlsuppl_admin/system_config/index/key/a56e60de18c2ef4cab1e141e90beee1e/"   class=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+
+    <a id="page-help-link" href="http://www.magentocommerce.com/gethelp/en_US/Mage_Adminhtml/catalog_product/edit/">Get help for this page</a>
+    <script type="text/javascript">$('page-help-link').target = 'magento_page_help'</script>
+
+</div>
+

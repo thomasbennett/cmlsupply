@@ -1,0 +1,12 @@
+a:2:{i:0;s:63:"SQLSTATE[HY000]: General error: 2006 MySQL server has gone away";i:1;s:1526:"#0 /chroot/home/cmlsuppl/cmlsupply.com/html/lib/Zend/Db/Adapter/Pdo/Abstract.php(261): PDO->beginTransaction()
+#1 /chroot/home/cmlsuppl/cmlsupply.com/html/lib/Zend/Db/Adapter/Abstract.php(473): Zend_Db_Adapter_Pdo_Abstract->_beginTransaction()
+#2 /chroot/home/cmlsuppl/cmlsupply.com/html/lib/Varien/Db/Adapter/Pdo/Mysql.php(123): Zend_Db_Adapter_Abstract->beginTransaction()
+#3 /chroot/home/cmlsuppl/cmlsupply.com/html/app/code/core/Mage/Core/Model/Resource/Abstract.php(63): Varien_Db_Adapter_Pdo_Mysql->beginTransaction()
+#4 /chroot/home/cmlsuppl/cmlsupply.com/html/app/code/core/Mage/Core/Model/Abstract.php(247): Mage_Core_Model_Resource_Abstract->beginTransaction()
+#5 /chroot/home/cmlsuppl/cmlsupply.com/html/app/code/core/Mage/CatalogSearch/controllers/ResultController.php(83): Mage_Core_Model_Abstract->save()
+#6 /chroot/home/cmlsuppl/cmlsupply.com/html/app/code/core/Mage/Core/Controller/Varien/Action.php(376): Mage_CatalogSearch_ResultController->indexAction()
+#7 /chroot/home/cmlsuppl/cmlsupply.com/html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(248): Mage_Core_Controller_Varien_Action->dispatch('index')
+#8 /chroot/home/cmlsuppl/cmlsupply.com/html/app/code/core/Mage/Core/Controller/Varien/Front.php(158): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 /chroot/home/cmlsuppl/cmlsupply.com/html/app/Mage.php(459): Mage_Core_Controller_Varien_Front->dispatch()
+#10 /chroot/home/cmlsuppl/cmlsupply.com/html/index.php(65): Mage::run()
+#11 {main}";}

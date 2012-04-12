@@ -1,0 +1,105 @@
+<block type="page/html" name="root" output="toHtml" template="page/print.phtml">
+   <block type="page/html_head" name="head" as="head">
+      <action method="addJs">
+         <script>prototype/prototype.js</script>
+      </action>
+      <action method="addJs">
+         <script>mage/translate.js</script>
+      </action>
+      <action method="addJs">
+         <script>prototype/validation.js</script>
+      </action>
+      <action method="addJs">
+         <script>varien/js.js</script>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/reset.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/boxes.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/menu.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/clears.css</stylesheet>
+      </action>
+      <action method="addItem">
+         <type>skin_css</type>
+         <name>css/iestyles.css</name>
+         <params/>
+         <if>lt IE 8</if>
+      </action>
+      <action method="addItem">
+         <type>skin_css</type>
+         <name>css/ie7minus.css</name>
+         <params/>
+         <if>lt IE 7</if>
+      </action>
+      <action method="addItem">
+         <type>js</type>
+         <name>lib/ds-sleight.js</name>
+         <params/>
+         <if>lt IE 7</if>
+      </action>
+      <action method="addItem">
+         <type>js</type>
+         <name>varien/iehover-fix.js</name>
+         <params/>
+         <if>lt IE 7</if>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/print.css</stylesheet>
+         <params>media=&quot;print&quot;</params>
+      </action>
+   </block>
+   <block type="core/text_list" name="content" as="content"/>
+</block>
+<reference name="content">
+   <block type="sales/order_print" name="sales.order.print" template="sales/order/print.phtml">
+      <action method="addItemRender">
+         <type>default</type>
+         <block>sales/order_item_renderer_default</block>
+         <template>sales/order/items/renderer/default.phtml</template>
+      </action>
+      <action method="addItemRender">
+         <type>grouped</type>
+         <block>sales/order_item_renderer_grouped</block>
+         <template>sales/order/items/renderer/default.phtml</template>
+      </action>
+      <block type="sales/order_tax" name="tax" template="sales/order/print/tax.phtml"/>
+   </block>
+</reference>
+<reference name="sales.order.print">
+   <action method="addItemRender">
+      <type>bundle</type>
+      <block>bundle/sales_order_items_renderer</block>
+      <template>bundle/sales/order/items/renderer.phtml</template>
+   </action>
+</reference>
+<reference name="sales.order.print">
+   <action method="addItemRender">
+      <type>downloadable</type>
+      <block>downloadable/sales_order_item_renderer_downloadable</block>
+      <template>downloadable/sales/order/items/renderer/downloadable.phtml</template>
+   </action>
+</reference>
+<reference name="top.links">
+   <action method="addLink" translate="label title" module="customer">
+      <label>Log Out</label>
+      <url helper="customer/getLogoutUrl"/>
+      <title>Log Out</title>
+      <prepare/>
+      <urlParams/>
+      <position>100</position>
+   </action>
+</reference>
+<reference name="right">
+   <block type="sales/reorder_sidebar" name="sale.reorder.sidebar" as="reorder" template="sales/reorder/sidebar.phtml"/>
+</reference>
+<reference name="head">
+   <action method="addItem">
+      <type>js</type>
+      <name>varien/weee.js</name>
+   </action>
+</reference>

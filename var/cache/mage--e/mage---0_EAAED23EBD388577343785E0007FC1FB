@@ -1,0 +1,42 @@
+<reference name="root">
+   <block type="adminhtml/sales_order_create_load" name="content"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_sidebar" template="sales/order/create/sidebar.phtml" name="sidebar">
+      <block type="adminhtml/sales_order_create_sidebar_cart" template="sales/order/create/sidebar/items.phtml" name="cart"/>
+      <block type="adminhtml/sales_order_create_sidebar_wishlist" template="sales/order/create/sidebar/items.phtml" name="wishlist"/>
+      <block type="adminhtml/sales_order_create_sidebar_reorder" template="sales/order/create/sidebar/items.phtml" name="reorder"/>
+      <block type="adminhtml/sales_order_create_sidebar_viewed" template="sales/order/create/sidebar/items.phtml" name="viewed"/>
+      <block type="adminhtml/sales_order_create_sidebar_compared" template="sales/order/create/sidebar/items.phtml" name="compared"/>
+      <block type="adminhtml/sales_order_create_sidebar_pcompared" template="sales/order/create/sidebar/items.phtml" name="pcompared"/>
+      <block type="adminhtml/sales_order_create_sidebar_pviewed" template="sales/order/create/sidebar/items.phtml" name="pviewed"/>
+   </block>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_items" template="sales/order/create/items.phtml" name="items">
+      <block type="adminhtml/sales_order_create_items_grid" template="sales/order/create/items/grid.phtml" name="items_grid">
+         <block type="adminhtml/sales_order_create_coupons" template="sales/order/create/coupons/form.phtml" name="coupons">
+            <block type="adminhtml/sales_order_create_coupons_form" template="sales/order/create/coupons/form.phtml" name="form"/>
+         </block>
+      </block>
+   </block>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_shipping_method" template="sales/order/create/abstract.phtml" name="shipping_method">
+      <block type="adminhtml/sales_order_create_shipping_method_form" template="sales/order/create/shipping/method/form.phtml" name="form"/>
+   </block>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_billing_method" template="sales/order/create/abstract.phtml" name="billing_method">
+      <block type="adminhtml/sales_order_create_billing_method_form" template="sales/order/create/billing/method/form.phtml" name="form"/>
+   </block>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_totals" template="sales/order/create/totals.phtml" name="totals"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_giftmessage" template="sales/order/create/giftmessage.phtml" name="giftmessage"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_messages" name="message"/>
+</reference>

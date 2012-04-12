@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <promo>
+            <children>
+                <checkoutpromo translate="title" module="checkoutpromo">
+                    <title>Checkout Promo Rules</title>
+                    <action>checkoutpromo/adminhtml_checkoutpromo/</action>
+                </checkoutpromo>
+            </children>
+        </promo>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <promo>
+                        <children>
+                            <checkoutpromo>
+                                <title>Checkout Promo Rules</title>
+                            </checkoutpromo>
+                        </children>
+                    </promo>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <layout>
+        <updates>
+            <checkoutpromo>
+                <file>checkoutpromo.xml</file>
+            </checkoutpromo>
+        </updates>
+    </layout>
+</config>

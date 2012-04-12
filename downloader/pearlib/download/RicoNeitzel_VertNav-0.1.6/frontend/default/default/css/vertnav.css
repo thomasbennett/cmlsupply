@@ -1,0 +1,63 @@
+.vertnav-container {
+	margin-top:10px;
+}
+
+#vertnav li a {
+	border-bottom:1px dotted gray;
+	display:block;
+	padding:3px;
+	width:189px;
+}
+
+#vertnav .inactive a {
+	background-color:#C0C0C0;
+}
+
+#vertnav .next a {
+	background-color:#DEDEDE;
+}
+
+#vertnav .prev a {
+	background-color:#DEDEDE;
+}
+
+#vertnav .first a {
+}
+
+#vertnav .last a {
+}
+
+#vertnav .only a {
+}
+
+#vertnav li.parent a {
+	background-color:#E0E0E0;
+	font-weight:bold;
+}
+
+#vertnav li.active a {
+	background-color:#FFFFFF;
+	font-weight:bold;
+}
+
+#vertnav li.inactive a {
+	font-weight:normal;
+}
+
+#vertnav .level0 {
+}
+
+#vertnav .level1 a {
+	padding-left:10px;
+	width:182px;
+}
+
+#vertnav .level2 a {
+	padding-left:20px;
+	width:172px;
+}
+
+#vertnav .level3 a {
+	padding-left:30px;
+	width:162px;
+}

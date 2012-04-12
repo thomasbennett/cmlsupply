@@ -1,0 +1,22 @@
+<remove name="right"/>
+<remove name="left"/>
+<block type="checkout/onepage_progress" name="root" output="toHtml" template="checkout/onepage/progress.phtml">
+   <block type="checkout/onepage_payment_info" name="payment_info">
+      <action method="setInfoTemplate">
+         <method/>
+         <template/>
+      </action>
+   </block>
+</block>
+<reference name="top.links">
+   <action method="addLink" translate="label title" module="customer">
+      <label>Log In</label>
+      <url helper="customer/getLoginUrl"/>
+      <title>Log In</title>
+      <prepare/>
+      <urlParams/>
+      <position>100</position>
+   </action>
+</reference>
+<remove name="wishlist_sidebar"/>
+<remove name="reorder"/>
